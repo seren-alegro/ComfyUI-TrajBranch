@@ -1,0 +1,10 @@
+[project]
+name = "comfyui-traj-branch"
+version = "0.1.0"
+description = "Branch a rectified-flow sampling trajectory mid-flight and resume it with new settings, for ComfyUI (Anima family)"
+license = "MIT"
+requires-python = ">=3.10"
+
+[tool.comfy]
+PublisherId = "seren-alegro"
+DisplayName = "Trajectory Branch"
