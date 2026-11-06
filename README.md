@@ -55,6 +55,18 @@ git clone https://github.com/seren-alegro/ComfyUI-TrajBranch
 Or copy this folder as `ComfyUI-TrajBranch` into
 `ComfyUI/custom_nodes` manually, then restart ComfyUI.
 
+## Example workflow
+
+`examples/traj_branch_identity_test.json` - a minimal core-nodes-only
+workflow: the Branch sampler captures at step 15 of 30 and the
+Resume sampler finishes the remaining 15 steps with the same
+settings, saving both results (`traj_full` / `traj_resumed`). If
+capture + resume is working, the two images match. The checkpoint
+name in the loader is a placeholder - point it at any Anima-family
+checkpoint, and if your setup loads the text encoder / VAE from
+separate files, swap that part of the chain accordingly. To fork
+instead of verify, change the prompt or CFG on the Resume side only.
+
 ## Tests
 
 `tests/test_traj.py` — numpy mirror of the grid/capture/resume
